@@ -1,4 +1,5 @@
-import { Home, Profile, SignIn, SignUp } from "@/pages";
+import { Home, Profile, SignIn, SignUp,Prediction,Community,Marketplace,Chat } from "@/pages";
+//import {News} from "@/news"
 import {
   HomeIcon,
   UserCircleIcon,
@@ -6,38 +7,62 @@ import {
   UserPlusIcon,
   DocumentTextIcon,
   NewspaperIcon,
+  SignalIcon,
+  SignalSlashIcon,
+  HomeModernIcon,
+  ChatBubbleLeftIcon,
+  UserGroupIcon
+  
 } from "@heroicons/react/24/solid";
 
 export const routes = [
   {
     icon: ArrowRightOnRectangleIcon,
     name: "Marketplace",
-    path: "/sign-in",
-    element: <SignIn />,
+    path: "/marketplace",
+    element: <Marketplace />,
   },{
     icon: HomeIcon,
-    name: "Chat with Expert",
+    name: "Home",
     path: "/home",
     element: <Home />,
   },
   {
-    icon: UserCircleIcon,
-    name: "Community Center",
+    icon: NewspaperIcon,
+    name: "Blogs and News",
     path: "/profile",
     element: <Profile />,
   },
-
   {
-    icon: UserPlusIcon,
-    name: "Prediction Center",
+    icon: SignalIcon,
+    name: "Sign In",
+    path: "/sign-in",
+    element: <SignIn />,
+  },
+  {
+    icon: SignalSlashIcon,
+    name: "Sign Up",
     path: "/sign-up",
     element: <SignUp />,
   },
+  
   {
-    icon: NewspaperIcon,
-    name: "Blogs and News",
-    path: "/sign-up",
-    element: <SignUp />,
+    icon: UserPlusIcon,
+    name: "Prediction Center",
+    path: "/prediction",
+    element: <Prediction />,
+  },
+  {
+    icon: ChatBubbleLeftIcon,
+    name: "Chat with Expert",
+    path: "/chat",
+    element: < Chat/>,
+  },
+  {
+    icon: UserGroupIcon,
+    name: "Community Center",
+    path: "/community",
+    element: < Community/>,
   },
   
 

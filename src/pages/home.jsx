@@ -13,11 +13,17 @@ import { UsersIcon } from "@heroicons/react/24/solid";
 import { PageTitle, Footer } from "@/widgets/layout";
 import { FeatureCard, TeamCard } from "@/widgets/cards";
 import { featuresData, teamData, contactData } from "@/data";
+import { Navbar } from "@/widgets/layout";
+import routes from "@/routes";
 
 export function Home() {
+
   return (
     <>
 
+      <div className="container absolute left-2/4 z-10 mx-auto -translate-x-2/4 p-4">
+        <Navbar routes={routes} />
+      </div>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
         <div className="absolute top-0 h-full w-full bg-[url('/img/main.jpg')] bg-[length:1409px_600px] bg-cover bg-center" />
         <div className="absolute top-0 h-full w-full bg-black/75 bg-cover bg-center" />
@@ -38,7 +44,7 @@ export function Home() {
           </div>
         </div>
       </div>
-      <section className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
+      <section className="-mt-32 bg-gray-50 px-4 pb-20 pt-4 bg-[#f9fafb]">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {featuresData.map(({ color, title, icon, description }) => (
@@ -100,8 +106,8 @@ export function Home() {
           </div>
         </div>
       </section>
-      <section className="px-4 pt-20 pb-48">
-        <div className="container mx-auto">
+      <section className="px-4 pt-20 pb-48 bg-[#f5f5f4]">
+        <div className="container mx-auto ">
           <PageTitle heading="Here is our Team">
 Our team of 6 members collaborated in order to provide some help for our farmers of the country In order to provide aid and relief to our farmers.
           </PageTitle>
@@ -126,7 +132,7 @@ Our team of 6 members collaborated in order to provide some help for our farmers
           </div>
         </div>
       </section>
-      <section className="relative bg-blue-gray-50/50 py-24 px-4">
+      <section className="relative bg-blue-gray-50/50 py-24 px-4 bg-[#111827]">
         <div className="container mx-auto">
           <PageTitle heading="Build something">
             Put the potentially record low maximum sea ice extent tihs year down
